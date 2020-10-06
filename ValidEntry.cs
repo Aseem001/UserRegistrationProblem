@@ -29,5 +29,26 @@ namespace UserRegistrationProblem
                 nLog.LogError("User entered an invalid first name: "+firstName);
             }
         }
+        public void validateLastName()
+        {
+            //Pattern for valid last name
+            string lastNamePattern = @"^[A-Z]{1}([a-zA-Z]+){2,}";
+            Regex regex = new Regex(lastNamePattern);
+            //User input
+            Console.WriteLine("Enter the last name of the user");
+            string lastName = Console.ReadLine();
+            //IF valid last name
+            if (regex.IsMatch(lastName))
+            {
+                Console.WriteLine("Thank you for entering a valid last name");
+                nLog.LogInfo("User entered a valid last name: " + lastName);
+            }
+            //If invalid last name
+            else
+            {
+                Console.WriteLine("Invalid last name, must have atleast 3 characters and first letter must be capital");
+                nLog.LogError("User entered an invalid last name: " + lastName);
+            }
+        }
     }
 }

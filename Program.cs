@@ -10,6 +10,8 @@ namespace UserRegistrationProblem
             Console.WriteLine("Welcome to User registration portal!");
             //Validation for first name
             validEntry.validateFirstName();
+            //Validation for last name
+            validEntry.validateLastName();
         }
     }
 }

@@ -3,3 +3,5 @@
 2020-10-06 14:59:15.7078 ERROR User entered an invalid first name: 254FSsfhs
 2020-10-06 14:59:35.3577 ERROR User entered an invalid first name: aggGDGJDG
 2020-10-06 14:59:48.9753 INFO User entered a valid first name: ARHFSHFShfjhfGDGHTDH
+2020-10-06 15:08:07.5651 INFO User entered a valid first name: Aseem
+2020-10-06 15:08:13.0783 INFO User entered a valid last name: Anand
