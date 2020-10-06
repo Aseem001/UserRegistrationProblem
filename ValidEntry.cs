@@ -70,8 +70,28 @@ namespace UserRegistrationProblem
                 Console.WriteLine("Invalid email:"+email);
                 nLog.LogError("User entered an invalid email: " + email);
             }
-
         }
-       
+        public void validateMobileNumber()
+        {
+            //Pattern for valid mobile number
+            string mobileNumberPattern = @"^91[ ][6-9]{1}[0-9]{9}$";
+            Regex regex = new Regex(mobileNumberPattern);
+            //User input
+            Console.WriteLine("Enter the country code and mobile number of the user");
+            string mobileNumber = Console.ReadLine().ToString();
+            //IF valid mobile number
+            if (regex.IsMatch(mobileNumber))
+            {
+                Console.WriteLine("Thank you for entering a valid mobile number");
+                nLog.LogInfo("User entered a valid mobile number: " + mobileNumber);
+            }
+            //If invalid mobile number
+            else
+            {
+                Console.WriteLine("Invalid mobile number");
+                nLog.LogError("User entered an invalid mobile number: " + mobileNumber);
+            }
+        }
+
     }
 }

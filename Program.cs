@@ -13,7 +13,9 @@ namespace UserRegistrationProblem
             //Validation for last name
             validEntry.validateLastName();
             //Validation for email
-            validEntry.validateEmail();                        
+            validEntry.validateEmail();
+            //Validation for mobile number
+            validEntry.validateMobileNumber();
         }
     }
 }
