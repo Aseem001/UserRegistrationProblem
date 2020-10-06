@@ -1,0 +1,5 @@
+2020-10-06 14:58:12.0839 INFO User entered a valid first name
+2020-10-06 14:58:26.7194 ERROR User entered an invalid first name
+2020-10-06 14:59:15.7078 ERROR User entered an invalid first name: 254FSsfhs
+2020-10-06 14:59:35.3577 ERROR User entered an invalid first name: aggGDGJDG
+2020-10-06 14:59:48.9753 INFO User entered a valid first name: ARHFSHFShfjhfGDGHTDH
