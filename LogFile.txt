@@ -1,0 +1,5 @@
+2020-10-06 19:26:24.8447 ERROR User entered an invalid password: aseem@001
+2020-10-06 19:26:32.8009 INFO User entered a valid password: Aseem@001
+2020-10-06 19:26:41.8955 ERROR User entered an invalid password: Asee
+2020-10-06 19:26:49.7547 INFO User entered a valid password: Aseemanand
+2020-10-06 19:27:04.0166 INFO User entered a valid password: aseemAnand
