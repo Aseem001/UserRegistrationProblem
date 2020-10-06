@@ -50,5 +50,28 @@ namespace UserRegistrationProblem
                 nLog.LogError("User entered an invalid last name: " + lastName);
             }
         }
+        public void validateEmail()
+        {
+            //Pattern for valid email
+            string emailPattern = @"^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*([@]{1}[a-zA-Z0-9]+)?([.][a-zA-Z]{3})+([.][a-zA-Z]{2})?$";
+            Regex regex = new Regex(emailPattern);
+            //User input
+            Console.WriteLine("Enter the email of the user");
+            string email = Console.ReadLine();
+            //IF valid email
+            if (regex.IsMatch(email))
+            {
+                Console.WriteLine("Thank you for entering a valid email");
+                nLog.LogInfo("User entered a valid email: " + email);
+            }
+            //If invalid email
+            else
+            {
+                Console.WriteLine("Invalid email:"+email);
+                nLog.LogError("User entered an invalid email: " + email);
+            }
+
+        }
+       
     }
 }
