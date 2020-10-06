@@ -95,7 +95,7 @@ namespace UserRegistrationProblem
         public void validatePassword()
         {
             //Pattern for valid password
-            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}";
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*#?&]{8,}$";
             Regex regex = new Regex(passwordPattern);
             //User input
             Console.WriteLine("Enter the password");
