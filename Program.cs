@@ -8,7 +8,7 @@ namespace UserRegistrationProblem
         {           
             ValidEntry validEntry = new ValidEntry();
             Console.WriteLine("Welcome to User registration portal!");
-           //Validation for first name
+            //Validation for first name
             validEntry.validateFirstName();
             //Validation for last name
             validEntry.validateLastName();
@@ -16,6 +16,8 @@ namespace UserRegistrationProblem
             validEntry.validateEmail();
             //Validation for mobile number
             validEntry.validateMobileNumber();
+            //Validation for password
+            validEntry.validatePassword();
         }
     }
 }

@@ -92,6 +92,27 @@ namespace UserRegistrationProblem
                 nLog.LogError("User entered an invalid mobile number: " + mobileNumber);
             }
         }
+        public void validatePassword()
+        {
+            //Pattern for valid password
+            string passwordPattern = @"^[A-Za-z\d@$!%*#?&]{8,}";
+            Regex regex = new Regex(passwordPattern);
+            //User input
+            Console.WriteLine("Enter the password");
+            string password = Console.ReadLine().ToString();
+            //IF valid password
+            if (regex.IsMatch(password))
+            {
+                Console.WriteLine("Voila! You entered a strong password");
+                nLog.LogInfo("User entered a valid password: " + password);
+            }
+            //If invalid password
+            else
+            {
+                Console.WriteLine("Invalid password: It must contain at least one each of Upper case, number and special character");
+                nLog.LogError("User entered an invalid password: " + password);
+            }
+        }
 
     }
 }
