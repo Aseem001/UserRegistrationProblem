@@ -13,7 +13,7 @@ namespace UserRegistrationProblem
         public string validateFirstName()
         {
             //Pattern for valid first name
-            string firstNamePattern = @"^[A-Z]{1}([a-zA-Z]+){2,}";          
+            string firstNamePattern = @"^[A-Z]{1}[a-zA-Z]{2,}$";          
             Regex regex = new Regex(firstNamePattern);
             //User input
         Label: Console.WriteLine("Enter the first name of the user");
@@ -36,7 +36,7 @@ namespace UserRegistrationProblem
         public string validateLastName()
         {
             //Pattern for valid last name
-            string lastNamePattern = @"^[A-Z]{1}([a-zA-Z]+){2,}";
+            string lastNamePattern = @"^[A-Z]{1}[a-zA-Z]{2,}$";
             Regex regex = new Regex(lastNamePattern);
             //User input
            Label: Console.WriteLine("Enter the last name of the user");
@@ -59,7 +59,7 @@ namespace UserRegistrationProblem
         public string validateEmail()
         {
             //Pattern for valid email
-            string emailPattern = @"^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*([@]{1}[a-zA-Z0-9]+)?([.][a-zA-Z]{3})+([.][a-zA-Z]{2})?$";
+            string emailPattern = @"^[a-zA-Z0-9]+([.+_-][a-zA-Z0-9]+)*@[a-zA-Z0-9]+([.][a-zA-Z]{3})+([.][a-zA-Z]{2})?$";
             Regex regex = new Regex(emailPattern);
             //User input
           Label:  Console.WriteLine("Enter the email of the user");
@@ -104,8 +104,8 @@ namespace UserRegistrationProblem
         }
         public string validatePassword()
         {
-            //Pattern for valid password
-            string passwordPattern = @"^(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*#?&]{8,}$";
+            //Pattern for valid password       
+            string passwordPattern = @"^(?=.*[A-Z])(?=.*[0-9])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$";
             Regex regex = new Regex(passwordPattern);
             //User input
           Label:  Console.WriteLine("Enter the password");
@@ -126,11 +126,11 @@ namespace UserRegistrationProblem
             }
         }
         public void registerUserDetails()
-        {            
-            string firstName =validateFirstName();           
-            string lastName=validateLastName();            
-            string email=validateEmail();            
-            string mobileNumber=validateMobileNumber();            
+        {
+            string firstName = validateFirstName();
+            string lastName = validateLastName();
+            string email = validateEmail();
+            string mobileNumber = validateMobileNumber();
             string password=validatePassword();
             UserDetails userDetails = new UserDetails(firstName, lastName, email, mobileNumber, password);
             userDetailsList.Add(userDetails);
@@ -149,8 +149,8 @@ namespace UserRegistrationProblem
             "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc",
             "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com",
             "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a",
-            "abc@gmail.com.aa.au" };
-            string emailPattern = @"^[a-zA-Z0-9]+([+-_.][a-zA-Z0-9]+)*([@]{1}[a-zA-Z0-9]+)?([.][a-zA-Z]{3})+([.][a-zA-Z]{2})?$";
+            "abc@gmail.com.aa.au" };            
+            string emailPattern = @"^[a-zA-Z0-9]+([.+_-][a-zA-Z0-9]+)*[@][a-zA-Z0-9]+([.][a-zA-Z]{3})+([.][a-zA-Z]{2})?$";
             Regex regex = new Regex(emailPattern);
             foreach(var sample in samples)
             {
