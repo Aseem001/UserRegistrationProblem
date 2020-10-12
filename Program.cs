@@ -12,22 +12,22 @@ namespace UserRegistrationProblem
             {
                 Console.WriteLine("\nEnter\n1-To register and view new user details\n2-To validate given email samples\n3-To exit\n");
                 int options = Convert.ToInt32(Console.ReadLine());
-                switch(options)
+                switch (options)
                 {
                     case 1:
                         Console.Clear();
-                        validEntry.registerUserDetails();
+                        validEntry.RegisterUserDetails();
                         break;
                     case 2:
                         Console.Clear();
-                        validEntry.checkEmailSamples();
+                        validEntry.CheckEmailSamples();
                         break;
                     case 3:
                         break;
                 }
                 if (options == 3)
                     break;
-            }            
+            }
         }
     }
 }

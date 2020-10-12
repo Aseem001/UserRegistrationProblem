@@ -11,8 +11,8 @@ namespace UserRegistrationProblem
         public string email;
         public string mobileNumber;
         public string password;
-        
-        public UserDetails(string firstName,string lastName,string email,string mobileNumber,string password)
+
+        public UserDetails(string firstName, string lastName, string email, string mobileNumber, string password)
         {
             this.firstName = firstName;
             this.lastName = lastName;
