@@ -9,7 +9,7 @@ namespace UserRegistrationProblem
     public class ValidEntry
     {
         private readonly NLog nLog = new NLog();
-        List<UserDetails> userDetailsList = new List<UserDetails>();
+        List<UserDetails> userDetailsList = new List<UserDetails>();       
         public string ValidateFirstOrLastName()
         {
             //Pattern for valid first or last name
@@ -151,10 +151,13 @@ namespace UserRegistrationProblem
         }
 
         public bool IsValid(string pattern,string userValue)
-        {
-            if (Regex.IsMatch(userValue,pattern))
+        {            
+            if (Regex.IsMatch(userValue, pattern))
                 return true;
-            return false;
+            else
+            {
+                throw new UserRegistrationCustomException(UserRegistrationCustomException.ExceptionType.INVALID_DETAILS, "Exception: Invalid Details Entered");               
+            }                           
         }
     }
 }
