@@ -25,7 +25,7 @@ namespace MSTestForUserRegistration
         }
 
         [TestMethod]
-        [DataRow("abc.@gmail.com")]
+        [DataRow("abc@abc@gmail.com")]
         [DataRow("abc.100@abc.com.au")]
         public void ValidateEmailTest(string name)
         {
@@ -44,7 +44,7 @@ namespace MSTestForUserRegistration
 
         [TestMethod]
         [DataRow("91 4566784567")]
-        [DataRow("47646873")]
+        [DataRow("47646873 80")]
         public void ValidateMobileNumberTest(string name)
         {
             ValidEntry validEntry = new ValidEntry();
