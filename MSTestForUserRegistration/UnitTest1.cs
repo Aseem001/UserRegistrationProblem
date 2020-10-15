@@ -5,12 +5,16 @@ namespace MSTestForUserRegistration
 {
     [TestClass]
     public class UnitTest1
-    {       
+    {    
+        /// <summary>
+        /// MSTest to check for valid and invalid names
+        /// </summary>
+        /// <param name="name"></param>
         [TestMethod]
         [DataRow("Virat")]
         [DataRow("kojhli")]
         public void ValidateNameTest(string name)
-        {
+        {            
             ValidEntry validEntry = new ValidEntry();
             string firstOrLastNamePattern = @"^[A-Z]{1}[a-zA-Z]{2,}$";
             try
@@ -24,6 +28,10 @@ namespace MSTestForUserRegistration
             }
         }
 
+        /// <summary>
+        /// MSTest to check for valid and invalid email samples
+        /// </summary>
+        /// <param name="name"></param>
         [TestMethod]
         [DataRow("abc@abc@gmail.com")]
         [DataRow("abc.100@abc.com.au")]
@@ -42,6 +50,10 @@ namespace MSTestForUserRegistration
             }
         }
 
+        /// <summary>
+        /// MSTest to check for valid and invalid mobile numbers
+        /// </summary>
+        /// <param name="name"></param>
         [TestMethod]
         [DataRow("91 4566784567")]
         [DataRow("47646873 80")]
@@ -60,6 +72,10 @@ namespace MSTestForUserRegistration
             }
         }
 
+        /// <summary>
+        /// MSTest to check for valid and invalid passwords
+        /// </summary>
+        /// <param name="name"></param>
         [TestMethod]
         [DataRow("hcAggfG13436@")]
         [DataRow("gchgcL#4675@@")]
