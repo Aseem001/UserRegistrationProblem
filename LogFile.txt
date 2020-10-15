@@ -1,0 +1,6 @@
+2020-10-13 12:33:52.4409 INFO User entered a valid name: Aseeccgh
+2020-10-13 12:33:53.8666 INFO User entered a valid name: Ftfgfg
+2020-10-13 12:33:58.8155 INFO User entered a valid email: gfcghghh@ccgcgf.com
+2020-10-13 12:34:04.7264 ERROR User entered an invalid mobile number: 56 97644566787
+2020-10-13 12:34:12.8530 INFO User entered a valid mobile number: 56 8908765432
+2020-10-13 12:34:18.0090 INFO User entered a valid password: gdhtgdghghDdyd365365@

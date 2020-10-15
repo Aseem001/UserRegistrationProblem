@@ -9,7 +9,12 @@ namespace UserRegistrationProblem
     public class ValidEntry
     {
         private readonly NLog nLog = new NLog();
-        List<UserDetails> userDetailsList = new List<UserDetails>();       
+        private readonly List<UserDetails> userDetailsList = new List<UserDetails>();
+
+        /// <summary>
+        /// Validates the first name of the or last.
+        /// </summary>
+        /// <returns></returns>
         public string ValidateFirstOrLastName()
         {
             //Pattern for valid first or last name
@@ -33,7 +38,12 @@ namespace UserRegistrationProblem
                     nLog.LogError("User entered an invalid name: " + firstOrLastName);                    
                 }
             }           
-        }        
+        }
+
+        /// <summary>
+        /// Validates the email.
+        /// </summary>
+        /// <returns></returns>
         public string ValidateEmail()
         {
             //Pattern for valid email
@@ -59,6 +69,11 @@ namespace UserRegistrationProblem
                 }
             }           
         }
+
+        /// <summary>
+        /// Validates the mobile number.
+        /// </summary>
+        /// <returns></returns>
         public string ValidateMobileNumber()
         {
             //Pattern for valid mobile number
@@ -85,6 +100,11 @@ namespace UserRegistrationProblem
                 }
             }            
         }
+
+        /// <summary>
+        /// Validates the password.
+        /// </summary>
+        /// <returns></returns>
         public string ValidatePassword()
         {
             //Pattern for valid password       
@@ -110,6 +130,10 @@ namespace UserRegistrationProblem
                 }
             }            
         }
+
+        /// <summary>
+        /// Registers the user details.
+        /// </summary>
         public void RegisterUserDetails()
         {
             Console.WriteLine("Enter a valid first name:");
@@ -128,6 +152,10 @@ namespace UserRegistrationProblem
                 Console.WriteLine("First Name: "+v.firstName+"\nLast Name: "+v.lastName+"\nEmail: "+v.email+"\nMobile Number: "+v.mobileNumber+"\nPassword: "+v.password);
             }            
         }
+
+        /// <summary>
+        /// Checks the given email samples to give valid and invalid emails out.
+        /// </summary>
         public void CheckEmailSamples()
         {
             string[] samples = {"abc@yahoo.com","abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com",
@@ -150,6 +178,15 @@ namespace UserRegistrationProblem
             }                        
         }
 
+        /// <summary>
+        /// Returns true if ... the pattern and userValue matches
+        /// </summary>
+        /// <param name="pattern">The pattern.</param>
+        /// <param name="userValue">The user value.</param>
+        /// <returns>
+        ///   <c>true</c> if the specified pattern is valid; otherwise, <c>false</c>.
+        /// </returns>
+        /// <exception cref="UserRegistrationCustomException">Exception: Invalid Details Entered</exception>
         public bool IsValid(string pattern,string userValue)
         {            
             if (Regex.IsMatch(userValue, pattern))
